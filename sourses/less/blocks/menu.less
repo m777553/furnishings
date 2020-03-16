@@ -16,7 +16,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	padding-top: 32px;
+	//padding-top: 32px;
 }
 
 .menu__main-item {
@@ -27,14 +27,16 @@
 .menu__main-item a {
 	display: block;
 	width: auto;
-	margin-right: 46px;
-	height: 25px;
+	padding: 33px 23px;
+	//margin-right: 46px;
+	height: 90px;
 	color: @text-white;
 	font-weight: bold;
 
 	&:focus,
 	&:hover {
-		color: @text-hover;
+		//color: @text-hover;
+		background-color: rgba(0, 0, 0, 0.5);
 	}
 
 	&:active {
@@ -46,7 +48,7 @@
 	position: relative;
 
 	& a {
-		width: 100px;
+		width: 146px;
 	}
 }
 
@@ -57,8 +59,8 @@
 		content: '';
 		display: block;
 		position: absolute;
-		top: 5px;
-		right: 10px;
+		top: 35px;
+		right: 20px;
 		width: 10px;
 		height: 10px;
 		//background-color: red;

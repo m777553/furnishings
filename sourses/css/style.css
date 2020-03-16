@@ -149,7 +149,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-top: 32px;
 }
 .menu__main-item {
   display: block;
@@ -158,14 +157,14 @@ img {
 .menu__main-item a {
   display: block;
   width: auto;
-  margin-right: 46px;
-  height: 25px;
+  padding: 33px 23px;
+  height: 90px;
   color: #ffffff;
   font-weight: bold;
 }
 .menu__main-item a:focus,
 .menu__main-item a:hover {
-  color: #686767;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .menu__main-item a:active {
   color: #000000;
@@ -174,7 +173,7 @@ img {
   position: relative;
 }
 .menu__main-item--catalog a {
-  width: 100px;
+  width: 146px;
 }
 .menu__main-item--catalog-a {
   position: relative;
@@ -183,8 +182,8 @@ img {
   content: '';
   display: block;
   position: absolute;
-  top: 5px;
-  right: 10px;
+  top: 35px;
+  right: 20px;
   width: 10px;
   height: 10px;
   border-right: 2px solid #D7A950;

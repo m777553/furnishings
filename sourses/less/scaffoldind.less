@@ -1,23 +1,18 @@
 @font-face {
-  font-family: BookAntiqua;
-  src: url(../Fonts/bookantiqua.woff2) format("woff2"),
-  url(../Fonts/bookantiqua.woff) format("woff");
+  font-family: Montserrat;
+  src: url(../Fonts/montserrat-v14-cyrillic_latin-regular.woff2) format("woff2"),
+  url(../Fonts/montserrat-v14-cyrillic_latin-regular.woff) format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: BookAntiqua;
-  src: url(../Fonts/bookantiquabold.woff2) format("woff2"),
-  url(../Fonts/bookantiquabold.woff) format("woff");
+  font-family: Montserrat;
+  src: url(../Fonts/montserrat-v14-cyrillic_latin-600.woff2) format("woff2"),
+  url(../Fonts/montserrat-v14-cyrillic_latin-600.woff) format("woff");
   font-weight: bold;
   font-style: normal;
 }
-
-
-
-
-
 
 html {
   box-sizing: border-box;
@@ -32,9 +27,9 @@ body {
   padding: 0;
 
 
-  font-size: 18px;
-  line-height: 25px;
-  font-family: "BookAntiqua", Georgia, serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Montserrat", Arial, sans-serif;
   color: @text;
   font-style: normal;
 
@@ -46,7 +41,7 @@ ul {
 }
 
 a {
-  text-transform: uppercase;
+  //text-transform: uppercase;
   text-decoration: none;
   color: @text;
 
@@ -54,7 +49,7 @@ a {
     color: @text-hover;
   }
   &:active {
-    color: @text-down;
+    color: @text-active;
   }
 }
 

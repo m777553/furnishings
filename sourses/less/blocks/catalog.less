@@ -1,0 +1,111 @@
+.catalog {
+	width: 100%;
+	background: linear-gradient(180deg, rgba(242, 242, 242, 0.4) 0%, rgba(242, 242, 242, 0) 100%);
+	//opacity: 0.4;
+}
+
+.catalog__list {
+	width: 1440px;
+	.center;
+	padding-top: 135px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.catalog__title {
+	display: block;
+	position: relative;
+	width: 710px;
+	height: 480px;
+	color: @text;
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 48px;
+	text-align: center;
+	padding-top: 190px;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 5px;
+		top: 212px;
+		display: block;
+		width: 185px;
+		height: 8px;
+		background: @bg-yellow;
+		opacity: 0.5;
+	}
+}
+
+.catalog__item a {
+	display: block;
+	width: 340px;
+	height: 480px;
+	border-radius: 5px;
+	background-color: rgba(34, 30, 24, 0.4);
+	color: @text-white;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 28px;
+	line-height: 32px;
+	padding-top: 54px;
+	padding-left: 30px;
+	margin-bottom: 25px;
+	box-shadow: 0 0 17px 10px rgba(34, 30, 24, 0.1);
+	&:hover,
+	&:focus {
+		opacity: 0.6;
+
+		//background: rgba(0,0,0,0.4);
+	}
+	&:active {
+		opacity: 0.9;
+	}
+}
+
+.catalog__item--small {
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.catalog__item--1 a {
+	background-image: url("../img/1.jpg");
+}
+.catalog__item--2 a {
+	background-image: url("../img/2.jpg");
+}
+.catalog__item--3 a {
+	background-image: url("../img/3.jpg");
+}
+.catalog__item--4 a {
+	background-image: url("../img/4.jpg");
+}
+.catalog__item--5 a {
+	background-image: url("../img/5.jpg");
+}
+.catalog__item--6 a {
+	background-image: url("../img/6.jpg");
+}
+.catalog__item--7 a {
+	background-image: url("../img/7.jpg");
+	position: relative;
+	z-index: 1;
+}
+.catalog__item--8 a {
+	background-image: url("../img/8.jpg");
+	position: relative;
+	z-index: 1;
+}
+.catalog__item--9 a {
+	background-image: url("../img/9.jpg");
+	position: relative;
+	z-index: 1;
+}
+.catalog__item--10 a {
+	background-image: url("../img/10.jpg");
+	position: relative;
+	z-index: 1;
+}

@@ -2,29 +2,29 @@
 <html lang="ru">
 
 <head>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
 	<meta charset="utf-8">
 	<title>Мебель</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
 </head>
 
 
 <body>
 	<header class="page-header">
-		<div class="page-header__contacts contacts">
-			<img src="img/header-logo.svg" alt="логотип магазина" class="contacts__logo" width="85" height="85">
-			<a class="contacts__email" href="mailto:mebel@info.com" >mebel@info.com</a>
-			<a class="contacts__phone" href="tel:+79999999999">+ 7 (999) 999 99 99</a>
-			<a class="contacts__button button" href="#" >Заказать обратный звонок</a>
-		</div>
+		<div class="page-header__wrap">
+			<div class="page-header__contacts contacts">
+				<img src="img/header-logo.svg" alt="логотип магазина" class="contacts__logo" width="85" height="85">
+				<a class="contacts__email" href="mailto:mebel@info.com">mebel@info.com</a>
+				<a class="contacts__phone" href="tel:+79999999999">+ 7 (999) 999 99 99</a>
+				<a class="contacts__button button" href="#">Заказать обратный звонок</a>
+			</div>
 
-		<div class="page-header__menu menu">
-			<nav class="menu__main">
-				<ul class="menu__main-list">
-					<li class="menu__main-item menu__main-item--catalog"><a class="menu__main-item--catalog-a" href="">Каталог</a>
+			<div class="page-header__menu menu">
+				<nav class="menu__main">
+					<ul class="menu__main-list">
+						<li class="menu__main-item menu__main-item--catalog"><a class="menu__main-item--catalog-a" href="">Каталог</a>
 							<ul class="menu__submain-list">
 								<li class="menu__submain-item"><a href="">Столы</a></li>
 								<li class="menu__submain-item"><a href="">Стулья</a></li>
@@ -38,25 +38,25 @@
 								<li class="menu__submain-item"><a href="">Шкафы</a></li>
 							</ul>
 						</li>
-					<li class="menu__main-item"><a href="">О нас</a></li>
-					<li class="menu__main-item"><a href="">Индивидуальный заказ</a></li>
-					<li class="menu__main-item"><a href="">Преимущества</a></li>
-					<li class="menu__main-item"><a href="">Доставка и оплата</a></li>
-					<li class="menu__main-item"><a href="">Контакты</a></li>
-				</ul>
-			</nav>
-			<div class="menu__social">
-				<ul class="menu__social-list">
-					<li class="menu__social-item"><a href=""><span class="visually-hidden">Мы в инстаграмм</span></a></li>
-					<li class="menu__social-item"><a href=""><span class="visually-hidden">Мы в контакте</span></a></li>
-				</ul>
+						<li class="menu__main-item"><a href="">О нас</a></li>
+						<li class="menu__main-item"><a href="">Индивидуальный заказ</a></li>
+						<li class="menu__main-item"><a href="">Преимущества</a></li>
+						<li class="menu__main-item"><a href="">Доставка и оплата</a></li>
+						<li class="menu__main-item"><a href="">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="menu__social">
+					<ul class="menu__social-list">
+						<li class="menu__social-item"><a href=""><span class="visually-hidden">Мы в инстаграмм</span></a></li>
+						<li class="menu__social-item"><a href=""><span class="visually-hidden">Мы в контакте</span></a></li>
+					</ul>
+				</div>
 			</div>
+			<h1 class="page-header__title">Производство мебели в стиле<br> лофт в Санкт-Петербурге</h1>
+			<p class="page-header__info">Индивидуальное изготовления мебели в собственной
+				мастерской. Используем натуральное дерево</p>
+			<a href="" class="page-header__button-calculation button">Рассчитать проект</a>
 		</div>
-		<h1 class="page-header__title">Производство мебели в стиле лофт в Санкт-Петербурге</h1>
-		<p class="page-header__info">Индивидуальное изготовления мебели в собственной
-			мастерской. Используем натуральное дерево</p>
-		<a href="" class="page-header__button-calculation button">Рассчитать проект</a>
-
 	</header>
 
 	<main class="page-main">
@@ -70,26 +70,27 @@
 			</div>
 			<div class="about-us__info">
 				<h3 class="about-us__info-title">О нас</h3>
-				<p class="about-us__info-text">Мы – компания мастеров специализирующихся на изготовлении дизайнерской мебели в стиле лофт. Наш конек – это поиск оригинальных решений для вашего интерьера. Мастера с душой подходят к каждому изделию, которое для вас изготовлено вручную из натуральных материалов. Именно такой подход делает стиль лофт таким неповторимым и изысканным.</p>
+				<p class="about-us__info-text">Мы – компания мастеров специализирующихся на изготовлении дизайнерской мебели в стиле лофт. Наш конек – это поиск оригинальных решений для вашего интерьера. Мастера с душой подходят к каждому изделию,
+					которое для вас изготовлено вручную из натуральных материалов. Именно такой подход делает стиль лофт таким неповторимым и изысканным.</p>
 			</div>
-			<img src="img/foto1.jpg" alt="" class="about-us__photo">
+			<img class="about-us__photo" src="img/foto1.jpg" alt="">
 		</section>
 		<section class="page-main__catalog catalog">
-			<div class="catalog__wrap">
-				<h2 class="catalog__title">Каталог</h2>
-				<ul class="catalog__list">
-					<li class="catalog__item"><a href="">Столы<span class="catalog__item catalog__item--small">50 товаров</span></a></li>
-					<li class="catalog__item"><a href="">Стулья<span class="catalog__item catalog__item--small">50 товаров</span></a></li>
-					<li class="catalog__item"><a href="">Стеллажи<span class="catalog__item catalog__item--small">50 товаров</span></a></li>
-					<li class="catalog__item"><a href="">Консоли<span class="catalog__item catalog__item--small">50 товаров</span></a></li>
-					<li class="catalog__item"><a href="">Кровати<span class="catalog__item catalog__item--small">50 товаров</span></a></li>
-					<li class="catalog__item"><a href="">Комоды<span class="catalog__item catalog__item--small">50 товаров</span></a></li>
-					<li class="catalog__item"><a href="">Вешалки<span class="catalog__item catalog__item--small">50 товаров</span></a></li>
-					<li class="catalog__item"><a href="">Тумбы ТВ<span class="catalog__item catalog__item--small">50 товаров</span></a></li>
-					<li class="catalog__item"><a href="">Барные стойки<span class="catalog__item catalog__item--small">50 товаров</span></a></li>
-					<li class="catalog__item"><a href="">Шкафы<span class="catalog__item catalog__item--small">50 товаров</span></a></li>
-				</ul>
-			</div>
+
+			<ul class="catalog__list">
+				<li class="catalog__title">Каталог</li>
+				<li class="catalog__item catalog__item--1"><a href="">Столы<br><span class="catalog__item catalog__item--small">50 товаров</span></a></li>
+				<li class="catalog__item catalog__item--2"><a href="">Стулья<br><span class="catalog__item catalog__item--small">50 товаров</span></a></li>
+				<li class="catalog__item catalog__item--3"><a href="">Стеллажи<br><span class="catalog__item catalog__item--small">50 товаров</span></a></li>
+				<li class="catalog__item catalog__item--4"><a href="">Консоли<br><span class="catalog__item catalog__item--small">50 товаров</span></a></li>
+				<li class="catalog__item catalog__item--5"><a href="">Кровати<br><span class="catalog__item catalog__item--small">50 товаров</span></a></li>
+				<li class="catalog__item catalog__item--6"><a href="">Комоды<br><span class="catalog__item catalog__item--small">50 товаров</span></a></li>
+				<li class="catalog__item catalog__item--7"><a href="">Вешалки<br><span class="catalog__item catalog__item--small">50 товаров</span></a></li>
+				<li class="catalog__item catalog__item--8"><a href="">Тумбы ТВ<br><span class="catalog__item catalog__item--small">50 товаров</span></a></li>
+				<li class="catalog__item catalog__item--9"><a href="">Барные стойки<br><span class="catalog__item catalog__item--small">50 товаров</span></a></li>
+				<li class="catalog__item catalog__item--10"><a href="">Шкафы<br><span class="catalog__item catalog__item--small">50 товаров</span></a></li>
+			</ul>
+
 		</section>
 
 		<section class="page-main__order order">
@@ -110,7 +111,7 @@
 					<label class="form__lable form__lable--file">Прикрепить файл
 						<input class="visually-hidden" type="file" id="file" name="file" multiple>
 					</label>
-					<p class="order__text">Нажимая на кнопку, вы принимаете <a href="">политику конфиденциальности</a> и даете согласие на <a href="">обработку форм данных</a></p>
+					<p class="form__text">Нажимая на кнопку, вы принимаете <a href="">политику конфиденциальности</a> и даете согласие на <a href="">обработку форм данных</a></p>
 					<input class="form__button button button--gray" type="submit" value="Отправить заявку">
 				</form>
 			</div>
@@ -119,13 +120,14 @@
 			<div class="advantages__wrap">
 				<h2 class="advantages__title">Наши преимущества</h2>
 				<ul class="advantages__list">
-					<li class="advantages__item">Наша команда работает под руководством инженера-технолога машиностроения, который внедряет и использует в производстве новейшие способы обработки дерева и сварки металла</li>
-					<li class="advantages__item">Только натуральные и экологически чистые материалы и средства покрытия</li>
-					<li class="advantages__item">Благодаря наличию современного оборудования, такому как фрезерный станок с ЧПУ, токарный станок с ЧПУ, станок для плазменного раскроя металла, мы обеспечиваем высокую точность и скорость выполнения
+					<li class="advantages__item advantages__item--1">Наша команда работает под руководством инженера-технолога машиностроения, который внедряет и использует в производстве новейшие способы обработки дерева и сварки металла</li>
+					<li class="advantages__item advantages__item--2">Только натуральные и экологически чистые материалы и средства покрытия</li>
+					<li class="advantages__item advantages__item--3">Благодаря наличию современного оборудования, такому как фрезерный станок с ЧПУ, токарный станок с ЧПУ, станок для плазменного раскроя металла, мы обеспечиваем высокую точность и
+						скорость выполнения
 						каждого заказа</li>
-					<li class="advantages__item">Предоплата 50%</li>
-					<li class="advantages__item">Доставка по городу бесплатно</li>
-					<li class="advantages__item">Составляем эскиз и расчет цены будущего
+					<li class="advantages__item advantages__item--4">Предоплата 50%</li>
+					<li class="advantages__item advantages__item--5">Доставка по городу бесплатно</li>
+					<li class="advantages__item advantages__item--6">Составляем эскиз и расчет цены будущего
 						изделия в день обращения</li>
 				</ul>
 			</div>
@@ -133,9 +135,8 @@
 		<section class="page-main__delivery delivery">
 			<div class="delivery__wrap">
 				<h2 class="delivery__title">Доставка и оплата</h2>
-				<p class="delivery__text">Мы доставляем заказы по России, Санкт-Петербургу
-					и Ленинградской области. Мы сотрудничаем с компаниями грузоперевозчиков, так что вам доступна любая компания на выбор. Осуществляем отправку сборным грузом. Так же возможен самовывоз. Сборка изделия при необходимости
-					осуществляется на территории заказчика.</p>
+				<p class="delivery__text">Мы доставляем заказы по России, Санкт-Петербургу<br> и Ленинградской области. Мы сотрудничаем с компаниями грузоперевозчиков, так что вам доступна любая компания на выбор. Осуществляем отправку сборным
+					грузом. Так же возможен самовывоз. Сборка изделия при необходимости <br>осуществляется на территории заказчика.</p>
 				<p class="delivery__text delivery__text--bold">Доступны следующие способы оплаты:</p>
 				<ul class="delivery__pay-list">
 					<li class="delivery__pay-item"><span class="visually-hidden">MasterCard</span></li>
@@ -161,9 +162,9 @@
 					<label class="qform__lable"><span class="visually-hidden">Телефон</span>
 						<input type="tel" name="tel" placeholder="+7 (___)-___-__-__" required>
 					</label>
+					<input class="qform__button button" type="submit" value="Отправить заявку">
+					<p class="qform__text">Нажимая на кнопку, вы принимаете <a href="">политику конфиденциальности</a> и даете согласие на <a href="">обработку форм данных</a></p>
 
-					<p class="order__text">Нажимая на кнопку, вы принимаете <a href="">политику конфиденциальности</a> и даете согласие на <a href="">обработку форм данных</a></p>
-					<input class="form__button button button--gray" type="submit" value="Отправить заявку">
 				</form>
 			</div>
 		</section>

@@ -1,0 +1,78 @@
+.advantages {
+	width: 100%;
+	background: #857a70 url("../img/bg-blur.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: @text-white;
+	min-height: 780px;
+	padding-top: 100px;
+	padding-bottom: 80px;
+}
+
+.advantages__wrap {
+	width: 1440px;
+	.center;
+}
+
+.advantages__title {
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 48px;
+	text-align: center;
+}
+
+.advantages__list {
+	width: 1440px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.advantages__item {
+	display: block;
+	width: 464px;
+	//min-height: 120px;
+	margin-top: 130px;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+margin-bottom: 70px;
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -130px;
+		left: 183px;
+		width: 98px;
+		height: 98px;
+		//background-color: red;
+		background: url("../img/Vector.svg") no-repeat 0 0;
+	}
+}
+
+
+.advantages__item--2::before {
+	top: -155px;
+
+	background: url("../img/Vector2.svg") no-repeat 0 0;
+}
+
+.advantages__item--3::before {
+	top: -120px;
+	background: url("../img/Vector3.svg") no-repeat 0 0;
+}
+
+.advantages__item--4::before {
+	border: 5px solid @bg-yellow;
+	border-radius: 49px;
+	background: url("../img/Vector4.svg") no-repeat 13px 30px;
+}
+
+.advantages__item--5::before {
+	background: url("../img/Vector5.svg") no-repeat 0 0;
+}
+
+.advantages__item--6::before {
+	background: url("../img/Vector6.svg") no-repeat 0 0;
+}

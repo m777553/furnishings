@@ -1,0 +1,77 @@
+.about-us {
+	width: 100%;
+	background-color: @bg;
+	color: @text;
+	position: relative;
+}
+
+.about-us__statistic {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: relative;
+	min-height: 264px;
+	width: 1558px;
+	background: @bg-yellow url("../img/bgYellow.jpg");
+	color: @text-white;
+	padding-top: 77px;
+	padding-right: 285px;
+	padding-left: 240px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+	z-index: 1;
+}
+
+.about-us__statistic-text {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 24px;
+
+	&--big {
+		font-weight: bold;
+		font-size: 64px;
+		line-height: 72px;
+	}
+}
+
+.about-us__info {
+	width: 707px;
+	min-height: 460px;
+	margin-left: 240px;
+	padding-top: 90px;
+}
+
+.about-us__info-title {
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 48px;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 98px;
+		height: 8px;
+		left: 0;
+		bottom: -22px;
+		background-color: @bg-yellow;
+		opacity: 0.5;
+	}
+}
+
+.about-us__info-text {
+	font-size: 18px;
+	line-height: 24px;
+	color: #4F4F4F;
+	margin-top: 85px;
+	margin-bottom: 89px;
+}
+
+.about-us__photo {
+	position: absolute;
+	top:0;
+	right: 0;
+	z-index: 0;
+	//width: 825px;
+
+}

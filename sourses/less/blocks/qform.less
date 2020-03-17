@@ -1,0 +1,41 @@
+.qform {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.qform input {
+	display: block;
+	background-color: rgba(255,255,255,0.4);
+	border: none;
+	border-radius: 5px;
+	width: 488px;
+	height: 55px;
+	padding-left: 24px;
+	vertical-align: middle;
+
+	&[type="submit"] {
+		background-color: @bg-yellow;
+		font-size: 16px;
+		line-height: 24px;
+		padding-left: 0;
+		width: 400px;
+		cursor: pointer;
+	}
+
+	&::placeholder {
+		font: inherit;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 22px;
+		color: rgba(189, 149, 113, 0.95);
+	}
+}
+
+.qform__text {
+	margin-top: 35px;
+	& a{
+		color: @bg-yellow;
+		text-decoration: underline;
+	}
+}

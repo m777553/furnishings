@@ -1,0 +1,54 @@
+.modal1 {
+	width: 1410px;
+	min-height: 824px;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: @bg-yellow;
+}
+
+.modal1__img-wrap {
+	width: 950px;
+position: relative;
+}
+
+.modal1__img {
+	width: 100%;
+	height: auto;
+
+}
+
+.modal1__img-btn {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 45px;
+	margin-top: -20px;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.43);
+	border: none;
+	&::after{
+		content: "";
+		top:12px;
+		left: 15px;
+		display: block;
+		position: absolute;
+		width: 13px;
+		height: 13px;
+		border-bottom: 1px solid @bg;
+		border-left: 1px solid @bg;
+		transform: rotate(45deg);
+	}
+	&--next {
+		left: auto;
+		right: 45px;
+		&::after{
+			left: 13px;
+			transform: rotate(225deg);
+		}
+	}
+}
+.modal1__form-wrap {
+	width: 460px;
+}

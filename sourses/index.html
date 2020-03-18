@@ -47,7 +47,7 @@
 				</nav>
 				<div class="menu__social">
 					<ul class="menu__social-list">
-						<li class="menu__social-item"><a href=""><span class="visually-hidden">Мы в инстаграмм</span></a></li>
+						<li class="menu__social-item menu__social-item--instagram"><a href=""><span class="visually-hidden">Мы в инстаграмм</span></a></li>
 						<li class="menu__social-item"><a href=""><span class="visually-hidden">Мы в контакте</span></a></li>
 					</ul>
 				</div>
@@ -73,7 +73,7 @@
 				<p class="about-us__info-text">Мы – компания мастеров специализирующихся на изготовлении дизайнерской мебели в стиле лофт. Наш конек – это поиск оригинальных решений для вашего интерьера. Мастера с душой подходят к каждому изделию,
 					которое для вас изготовлено вручную из натуральных материалов. Именно такой подход делает стиль лофт таким неповторимым и изысканным.</p>
 			</div>
-			<img class="about-us__photo" src="img/foto1.jpg" alt="">
+			<!-- <img class="about-us__photo" src="img/foto1.jpg" alt=""> -->
 		</section>
 		<section class="page-main__catalog catalog">
 
@@ -139,10 +139,10 @@
 					грузом. Так же возможен самовывоз. Сборка изделия при необходимости <br>осуществляется на территории заказчика.</p>
 				<p class="delivery__text delivery__text--bold">Доступны следующие способы оплаты:</p>
 				<ul class="delivery__pay-list">
-					<li class="delivery__pay-item"><span class="visually-hidden">MasterCard</span></li>
-					<li class="delivery__pay-item"><span class="visually-hidden">Visa</span></li>
-					<li class="delivery__pay-item"><span class="visually-hidden">Qiwi</span></li>
-					<li class="delivery__pay-item"><span class="visually-hidden">Яндекс Деньги</span></li>
+					<li class="delivery__pay-item delivery__pay-item--mc"><span class="visually-hidden">MasterCard</span></li>
+					<li class="delivery__pay-item delivery__pay-item--visa"><span class="visually-hidden">Visa</span></li>
+					<li class="delivery__pay-item delivery__pay-item--qiwi"><span class="visually-hidden">Qiwi</span></li>
+					<li class="delivery__pay-item delivery__pay-item--ya"><span class="visually-hidden">Яндекс Деньги</span></li>
 					<li class="delivery__pay-item"><span class="visually-hidden">МИР</span></li>
 				</ul>
 				<p class="delivery__text">Так же оплата возможна наличными при получении
@@ -169,20 +169,27 @@
 			</div>
 		</section>
 		<section class="page-main__map map">
+			<!-- google map -->
+			<iframe
+			 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2241.7799030840333!2d37.39146764927642!3d55.81442133490227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54631bc49a5fd%3A0x8fbaae96436648d6!2z0J3QtdC80LDQvdGB0LrQuNC5INC_0YAt0LQsIDQg0LrQvtGA0L_Rg9GBIDIsINCc0L7RgdC60LLQsCwgMTIzMTgx!5e0!3m2!1sru!2sru!4v1584566872211!5m2!1sru!2sru"
+			 width="100%" height="670" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			<div class="map__wrap">
-				<!-- google map -->
+
+
 				<div class="map__info info">
 					<h2 class="info__title">Контакты</h2>
-					<ul class="info__adress-list">
-						<li class="info__adress-item info__adress-item--adress">123181, г. Москва,<br>ул. Неманский проезд д. 4, корп. 2</li>
-						<li class="info__adress-item info__adress-item--phone"><a href="tel:+79999999999">+7 (999) 999 - 99 - 99</a></li>
-						<li class="info__adress-item info__adress-item--mail"><a href="mailto:info@lklegion.ru">info@lklegion.ru</a></li>
-						<li class="info__adress-item info__adress-item--time">пн-вс 24/7</li>
-					</ul>
-					<ul class="info__social-list">
-						<li class="info__social-item info__social-item--vk"><a href=""><span class="visually-hidden">В контакте</span></a></li>
-						<li class="info__social-item info__social-item--insta"><a href=""><span class="visually-hidden">Инстаграмм</span></a></li>
-					</ul>
+					<div class="info__column">
+						<ul class="info__adress-list">
+							<li class="info__adress-item info__adress-item--adress">123181, г. Москва,<br>ул. Неманский проезд д. 4, корп. 2</li>
+							<li class="info__adress-item info__adress-item--phone"><a href="tel:+79999999999">+7 (999) 999 - 99 - 99</a></li>
+							<li class="info__adress-item info__adress-item--mail"><a href="mailto:info@lklegion.ru">info@lklegion.ru</a></li>
+							<li class="info__adress-item info__adress-item--time">пн-вс 24/7</li>
+						</ul>
+						<ul class="info__social-list">
+							<li class="info__social-item info__social-item--vk"><a href=""><span class="visually-hidden">В контакте</span></a></li>
+							<li class="info__social-item info__social-item--insta"><a href=""><span class="visually-hidden">Инстаграмм</span></a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 
@@ -195,12 +202,41 @@
 
 
 	<footer class="page-footer">
-		<div class="page-footer__copiright copiright">
-			<p class="copiright__info">© Steel Loft Décor, 2020</p>
-			<a href="" class="copiright__document">Политика конфиденциальности</a>
+		<div class="page-footer__wrap">
+			<p class="page-footer__info">© Steel Loft Décor, 2020</p>
+			<a href="" class="page-footer__document">Политика конфиденциальности</a>
 		</div>
 	</footer>
 
+	<div class="modal1">
+		<div class="modal1__img-wrap">
+			<img class="modal1__img" src="img/slid1.jpg" alt="фото стул и стол">
+			<button class="modal1__img-btn modal1__img-btn--pre" type="button" name="button"><span class="visually-hidden">предыдущее фото</span></button>
+			<button class="modal1__img-btn modal1__img-btn--next" type="button" name="button"><span class="visually-hidden">следующее фото</span></button>
+			<!-- кнопки номера фото -->
+		</div>
+		<div class="modal1__form-wrap">
+			<h2 class="order__text order__text--modal1">Отправьте заявку,
+				чтобы мы рассчитали стоимость</h2>
+			<form class="order__form form form--modal1" action="http://www.mebel.ru/" enctype="text/plain">
+				<label class="form__lable form__lable--modal1"><span class="visually-hidden">Имя</span>
+					<input type="text" name="name" placeholder="Введите имя:">
+				</label>
+				<label class="form__lable form__lable--modal1"><span class="visually-hidden">Телефон</span>
+					<input type="tel" name="tel" placeholder="+7 (___)-___-__-__" required>
+				</label>
+				<label class="form__lable form__lable--modal1"><span class="visually-hidden">Оставьте комментарий...</span>
+					<textarea name="addition" placeholder="Оставьте комментарий..."></textarea>
+				</label>
+				<label class="form__lable form__lable--file form__lable--modal1">Прикрепить файл
+					<input class="visually-hidden" type="file" id="file" name="file" multiple>
+				</label>
+				<p class="form__text form__text--modal1">Нажимая на кнопку, вы принимаете <a href="">политику конфиденциальности</a> и даете согласие на <a href="">обработку форм данных</a></p>
+				<input class="form__button button button--gray" type="submit" value="Отправить заявку">
+			</form>
+		</div>
+		<button class="modal1__close-btn close-btn"><span class="visually-hidden">Закрыть</span></button>
+	</div>
 
 	<!-- <script src="JS/script.js"></script> -->
 </body>

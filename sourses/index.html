@@ -52,7 +52,7 @@
 					</ul>
 				</div>
 			</div>
-			<h1 class="page-header__title">Производство мебели в стиле<br> лофт в Санкт-Петербурге</h1>
+			<h1 class="page-header__title">Производство<br class="tablet"> мебели в стиле<br class="desktop"> лофт в <nobr>Санкт-Петербурге</nobr></h1>
 			<p class="page-header__info">Индивидуальное изготовления мебели в собственной
 				мастерской. Используем натуральное дерево</p>
 			<a href="" class="page-header__button-calculation button">Рассчитать проект</a>
@@ -64,14 +64,16 @@
 			<h2 class="visually-hidden">Сведения о компании</h2>
 			<div class="about-us__statistic">
 
-				<p class="about-us__statistic-text"><span class="about-us__statistic-text about-us__statistic-text--big">>145</span><br> моделей на выбор</p>
-				<p class="about-us__statistic-text"><span class="about-us__statistic-text about-us__statistic-text--big">100%</span><br>ручная работа</p>
+				<p class="about-us__statistic-text"><span class="about-us__statistic-text about-us__statistic-text--big">>145</span><br> моделей<br class="tablet"> на выбор</p>
+				<p class="about-us__statistic-text"><span class="about-us__statistic-text about-us__statistic-text--big">100%</span><br>ручная<br class="tablet"> работа</p>
 				<p class="about-us__statistic-text"><span class="about-us__statistic-text about-us__statistic-text--big">>55</span><br> проектов реализовано</p>
 			</div>
 			<div class="about-us__info">
+				<div class="about-us__info-wrap">
 				<h3 class="about-us__info-title">О нас</h3>
 				<p class="about-us__info-text">Мы – компания мастеров специализирующихся на изготовлении дизайнерской мебели в стиле лофт. Наш конек – это поиск оригинальных решений для вашего интерьера. Мастера с душой подходят к каждому изделию,
 					которое для вас изготовлено вручную из натуральных материалов. Именно такой подход делает стиль лофт таким неповторимым и изысканным.</p>
+					</div>
 			</div>
 			<!-- <img class="about-us__photo" src="img/foto1.jpg" alt=""> -->
 		</section>
@@ -111,7 +113,7 @@
 					<label class="form__lable form__lable--file">Прикрепить файл
 						<input class="visually-hidden" type="file" id="file" name="file" multiple>
 					</label>
-					<p class="form__text">Нажимая на кнопку, вы принимаете <a href="">политику конфиденциальности</a> и даете согласие на <a href="">обработку форм данных</a></p>
+					<p class="form__text">Нажимая на кнопку, вы принимаете <a href="">политику конфиденциальности</a><br class="tablet"> и даете согласие на <a href="">обработку форм данных</a></p>
 					<input class="form__button button button--gray" type="submit" value="Отправить заявку">
 				</form>
 			</div>
@@ -210,9 +212,19 @@
 
 	<div class="modal1">
 		<div class="modal1__img-wrap">
-			<img class="modal1__img" src="img/slid1.jpg" alt="фото стул и стол">
+			<img class="modal1__img modal1__img--1" src="img/slid1.jpg" alt="фото стул и стол">
 			<button class="modal1__img-btn modal1__img-btn--pre" type="button" name="button"><span class="visually-hidden">предыдущее фото</span></button>
 			<button class="modal1__img-btn modal1__img-btn--next" type="button" name="button"><span class="visually-hidden">следующее фото</span></button>
+			<div class="modal1__slider-controls">
+				<label class="checked" for="img1">Первое фото</label>
+				<label for="img2">второе фото</label>
+				<label for="img3">третье фото</label>
+				<label for="img4">четвертое фото</label>
+				<label for="img5">пятое фото</label>
+				<label for="img6">шестое фото</label>
+				<label for="img7">седьмое фото</label>
+				<label for="img8">восьмое фото</label>
+			</div>
 			<!-- кнопки номера фото -->
 		</div>
 		<div class="modal1__form-wrap">
@@ -228,14 +240,38 @@
 				<label class="form__lable form__lable--modal1"><span class="visually-hidden">Оставьте комментарий...</span>
 					<textarea name="addition" placeholder="Оставьте комментарий..."></textarea>
 				</label>
-				<label class="form__lable form__lable--file form__lable--modal1">Прикрепить файл
+				<label class="form__lable form__lable--file form__lable--file-modal1">Прикрепить файл
 					<input class="visually-hidden" type="file" id="file" name="file" multiple>
 				</label>
 				<p class="form__text form__text--modal1">Нажимая на кнопку, вы принимаете <a href="">политику конфиденциальности</a> и даете согласие на <a href="">обработку форм данных</a></p>
-				<input class="form__button button button--gray" type="submit" value="Отправить заявку">
+				<input class="form__button form__button--modal1 button button--gray" type="submit" value="Отправить заявку">
 			</form>
 		</div>
 		<button class="modal1__close-btn close-btn"><span class="visually-hidden">Закрыть</span></button>
+	</div>
+
+	<div class="modal2">
+
+		<div class="modal2__form-wrap">
+			<h2 class="order__text order__text--modal2">Отправьте заявку<br> и мы вам перезвоним</h2>
+			<form class="order__form form form--modal2" action="http://www.mebel.ru/" enctype="text/plain">
+				<label class="form__lable form__lable--modal2"><span class="visually-hidden">Имя</span>
+					<input type="text" name="name" placeholder="Введите имя:">
+				</label>
+				<label class="form__lable form__lable--modal2"><span class="visually-hidden">Телефон</span>
+					<input type="tel" name="tel" placeholder="+7 (___)-___-__-__" required>
+				</label>
+				<label class="form__lable form__lable--modal2"><span class="visually-hidden">Оставьте комментарий...</span>
+					<textarea name="addition" placeholder="Оставьте комментарий..."></textarea>
+				</label>
+				<label class="form__lable form__lable--file form__lable--file-modal2">Прикрепить файл
+					<input class="visually-hidden" type="file" id="file" name="file" multiple>
+				</label>
+				<p class="form__text form__text--modal2">Нажимая на кнопку, вы принимаете <a href="">политику конфиденциальности</a><br> и даете согласие на <a href="">обработку форм данных</a></p>
+				<input class="form__button form__button--modal2 button button--gray" type="submit" value="Отправить заявку">
+			</form>
+		</div>
+		<button class="modal2__close-btn close-btn"><span class="visually-hidden">Закрыть</span></button>
 	</div>
 
 	<!-- <script src="JS/script.js"></script> -->

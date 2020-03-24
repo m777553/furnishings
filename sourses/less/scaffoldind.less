@@ -77,3 +77,19 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.only-mobile {
+  display: none;
+}
+.not-mobile {
+
+}
+
+@media (max-width: @tablet-width) {
+  .only-mobile {
+    display: block;
+  }
+  .not-mobile {
+    display: none;
+  }
+}

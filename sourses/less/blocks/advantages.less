@@ -37,7 +37,8 @@
 	text-align: center;
 	vertical-align: middle;
 	position: relative;
-margin-bottom: 70px;
+	margin-bottom: 70px;
+
 	&::before {
 		content: "";
 		display: block;
@@ -51,10 +52,8 @@ margin-bottom: 70px;
 	}
 }
 
-
 .advantages__item--2::before {
 	top: -155px;
-
 	background: url("../img/Vector2.svg") no-repeat 0 0;
 }
 
@@ -75,4 +74,59 @@ margin-bottom: 70px;
 
 .advantages__item--6::before {
 	background: url("../img/Vector6.svg") no-repeat 0 0;
+}
+@media (max-width: @desktop-width) {
+	.advantages {
+		// width: 100%;
+		background-image: url("../img/bg-blur.jpg");
+		// background-size: cover;
+		// background-position: center;
+		// color: @text-white;
+		// min-height: 780px;
+		padding-top: 85px;
+		padding-bottom: 80px;
+	}
+
+	.advantages__wrap {
+		.widthForTabletWrap;
+	}
+
+	.advantages__title {
+		// font-weight: bold;
+		// font-size: 40px;
+		// line-height: 48px;
+		// text-align: center;
+	}
+
+	.advantages__list {
+		.widthForTabletWrap;
+		width: 100%;
+		// display: flex;
+		// flex-wrap: wrap;
+		justify-content: space-around;
+		//align-items: center;
+	}
+
+	.advantages__item {
+		//display: block;
+		//min-width: 464px;
+		//min-height: 120px;
+		margin-top: 200px;
+		// text-align: center;
+		// vertical-align: middle;
+		// position: relative;
+		// margin-bottom: 70px;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: -130px;
+			left: 183px;
+			width: 98px;
+			height: 98px;
+			// //background-color: red;
+			// background: url("../img/Vector.svg") no-repeat 0 0;
+		}
+	}
 }

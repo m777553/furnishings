@@ -1,6 +1,5 @@
 .page-footer {
 	width: 100%;
-
 	background: @bg-footer;
 }
 
@@ -25,4 +24,9 @@
 
 .page-footer__document {
 	text-decoration: underline;
+}
+@media (max-width: @desktop-width) {
+	.page-footer__wrap {
+		.widthForTabletWrap;
+	}
 }

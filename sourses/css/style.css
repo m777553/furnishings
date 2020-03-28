@@ -489,13 +489,17 @@ br.tablet {
 }
 @media (max-width: 767px) {
   .menu {
-    background-color: rgba(35, 31, 32, 0.75);
+    background-color: rgba(35, 31, 32, 0.9);
     flex-direction: column;
     width: 90%;
     max-width: 650px;
     min-width: 288px;
     width: 100%;
     height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
   }
   .menu__main {
     width: 100%;
@@ -593,6 +597,37 @@ br.tablet {
   .menu__contacts-email:hover,
   .menu__contacts-phone:hover {
     color: #ffffff;
+  }
+  .menu__close-button {
+    order: -2;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: auto;
+    width: 23px;
+    height: 23px;
+    border: none;
+    background: none;
+    position: relative;
+    cursor: pointer;
+  }
+  .menu__close-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url("../img/crossYellow.svg") no-repeat center center;
+    background-size: cover;
+  }
+  /* здесь стили, которые зависят от состояния меню (закрыто или открыто) */
+  .menu--closed {
+    display: none;
+  }
+  .menu--opened {
+    display: flex;
+    margin-top: -115px;
   }
 }
 .about-us {
@@ -697,6 +732,62 @@ br.tablet {
   .about-us__info-text {
     width: 100%;
     color: #ffffff;
+    margin-top: 85px;
+    margin-bottom: 158px;
+  }
+}
+@media (max-width: 767px) {
+  .about-us {
+    background: url("../img/foto1mobile.jpg") no-repeat top right;
+    background-size: 62.5%;
+  }
+  .about-us__statistic {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    padding: 25px 0;
+  }
+  .about-us__statistic-text {
+    max-width: 100%;
+    width: 100px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .about-us__statistic-text--big {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .about-us__info {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 760px;
+    padding-top: 135px;
+  }
+  .about-us__info-wrap {
+    width: 90%;
+    max-width: 650px;
+    min-width: 288px;
+    margin: 0 auto;
+  }
+  .about-us__info-title {
+    color: #ffffff;
+    margin-top: 0;
+    font-size: 24px;
+    line-height: 48px;
+    color: #333333;
+  }
+  .about-us__info-title::after {
+    width: 58px;
+    height: 4px;
+    bottom: -10px;
+    opacity: 1;
+  }
+  .about-us__info-text {
+    width: 100%;
+    color: #333333;
     margin-top: 85px;
     margin-bottom: 158px;
   }

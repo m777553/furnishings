@@ -259,7 +259,7 @@
 }
 @media (max-width: @tablet-width) {
 	.menu {
-		background-color: rgba(35, 31, 32, 0.75);
+		background-color: rgba(35, 31, 32, 0.9);
 		//display: block;
 		// flex-wrap: wrap;
 		flex-direction: column;
@@ -267,11 +267,17 @@
 		.widthForMobileWrap;
 		width: 100%;
 		height: auto;
+		//margin-top: -120px;
 		// border-top: 1px solid rgba(255,255,255,0.3);
 		// border-bottom: 1px solid rgba(255,255,255,0.3);
 		// justify-content: space-between;
 		// align-items: center;
 		//position: relative;
+		//display: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 3;
 	}
 
 	.menu__main {
@@ -428,4 +434,78 @@
 			color: @text-white;
 		}
 	}
+	.menu__close-button {
+		order: -2;
+		margin-top: 20px;
+		margin-right: 20px;
+		margin-left: auto;
+		width: 23px;
+		height: 23px;
+		border: none;
+		background: none;
+		position: relative;
+		cursor: pointer;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 23px;
+			height: 23px;
+			background: url("../img/crossYellow.svg") no-repeat center center;
+			background-size: cover;
+		}
+	}
+
+
+	/* здесь стили, которые зависят от состояния меню (закрыто или открыто) */
+
+	// .menu--nojs .menu__contacts-phone {
+	// 	display: none;
+	// }
+
+	// 	.menu--closed .menu__toogle::before {
+	// 		content: "";
+	// 		display: block;
+	// 		.default-nole;
+	// 		transform: translateY(-8px);
+	// 		width: 22px;
+	// 		height: 2px;
+	// 		background: #221f1f;
+	// 		box-shadow: 0 6px #221f1f, 0 13px #221f1f;
+	// 	}
+	//
+	// .menu--opened .menu__toogle::before {
+	// 		content: "";
+	// 		display: block;
+	// 		.default-nole;
+	// 		transform: rotate(45deg);
+	// 		width: 24px;
+	// 		height: 2px;
+	// 		background: #221f1f;
+	// 	}
+	//
+	// 	.menu--opened .menu__toogle::after {
+	// 		content: "";
+	// 		display: block;
+	// 		.default-nole;
+	// 		transform: translateY(-2px) rotate(-45deg);
+	// 		width: 24px;
+	// 		height: 2px;
+	// 		background: #221f1f;
+	//
+	// 	}
+
+		.menu--closed {
+			display: none;
+		}
+
+		.menu--opened {
+			display: flex;
+			margin-top: -115px;
+			//position: absolute;
+		}
+
+
 }

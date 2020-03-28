@@ -11,6 +11,7 @@
 		border-radius: 5px;
 		border: none;
 		padding-left: 24px;
+		padding-top: 17px;
 		vertical-align: middle;
 		&[type="submit"] {
 			padding-left: 0;
@@ -191,6 +192,107 @@
 		font-weight: bold;
 		font-size: 16px;
 		line-height: 24px;
+
+	}
+
+}
+
+
+@media (max-width: @tablet-width) {
+	.form {
+		// display: flex;
+		// flex-wrap: wrap;
+		// justify-content: space-between;
+		// align-items: center;
+
+		& input {
+			display: block;
+			width: 90vw;
+			max-width: 670px;
+			 height: 55px;
+			 margin-bottom: 24px;
+			// border-radius: 5px;
+			// border: none;
+			// padding-left: 24px;
+			// vertical-align: middle;
+			// &[type="submit"] {
+			// 	padding-left: 0;
+			// 	cursor: pointer;
+			// }
+			// &::placeholder {
+			// 	font: inherit;
+			// 	font-weight: normal;
+			// 	font-size: 18px;
+			// 	line-height: 22px;
+			// 	color: rgba(189, 149, 113, 0.4);
+			// }
+		}
+
+		& textarea {
+			display: block;
+			width: 90vw;
+			max-width: 670px;
+			height: 190px;
+			.center;
+			margin-top: 0px;
+			// border-radius: 5px;
+			// border: none;
+			// resize: none;
+			// padding-top: 19px;
+			// padding-left: 24px;
+
+			&::placeholder {
+				// font: inherit;
+				// font-weight: normal;
+				// font-size: 18px;
+				// line-height: 22px;
+				// color: rgba(189, 149, 113, 0.4);
+			}
+		}
+	}
+
+	.form__lable--file {
+		// display: block;
+		// width: 200px;
+		// text-align: center;
+		//.center;
+		//flex-grow: 5;
+		//margin-top: 40px;
+		// padding-left: 37px;
+		// background: url("../img/clip.png") no-repeat 40% 0;
+		//
+		// &:focus,
+		// &:hover {
+		// 	cursor: pointer;
+		// 	text-decoration: underline;
+		// }
+	}
+
+	.form__text {
+		//display: block;
+		width: 90%;
+		//text-align: center;
+		// .center;
+		// margin-top: 50px;
+		// text-align: center;
+		// font-weight: normal;
+		// font-size: 15px;
+		// line-height: 24px;
+
+		& a {
+			color: inherit;
+			font-weight: bold;
+			text-decoration: underline;
+
+			&:focus,
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	input.form__button {
+		padding-top: 0;
 
 	}
 

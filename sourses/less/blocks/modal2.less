@@ -86,17 +86,15 @@ input.form__button--modal2 {
 	border: none;
 	cursor: pointer;
 }
-
 @media(max-width: @desktop-width) {
 	.modal2 {
 		width: 736px;
 		height: 824px;
 	}
+
 	.modal2__form-wrap {
 		width: 650px;
-
 	}
-
 	// .order__text--modal2 {
 	// 	width: 340px;
 	// 	margin-top: 47px;
@@ -106,7 +104,6 @@ input.form__button--modal2 {
 	// 	text-align: center;
 	// 	color: @text-white;
 	// }
-
 	.form--modal2 {
 		width: 100%;
 		// flex-direction: column;
@@ -117,7 +114,6 @@ input.form__button--modal2 {
 	.form__lable--modal2 {
 		width: 100%;
 		margin-bottom: 40px;
-
 
 		& input,
 		& textarea {
@@ -166,5 +162,89 @@ input.form__button--modal2 {
 		border: none;
 		cursor: pointer;
 	}
+}
+@media(max-width: @tablet-width) {
+	.modal2 {
+		width: 320px;
+		height: auto;
+	}
 
+	.modal2__form-wrap {
+		width: 255px;
+		height: auto;
+	}
+
+	.order__text--modal2 {
+		width: 100%;
+		margin-top: 30px;
+		//font-weight: bold;
+		font-size: 18px;
+		line-height: 24px;
+		// 	text-align: center;
+		// 	color: @text-white;
+	}
+
+	.form--modal2 {
+		width: 100%;
+		// flex-direction: column;
+		// align-items: stretch;
+		margin-top: 20px;
+	}
+
+	.form__lable--modal2 {
+		width: 100%;
+		//height: 48px;
+		margin-bottom: 8px;
+
+		& input,
+		& textarea {
+			margin-bottom: 8px;
+			padding-top: 5px;
+			width: 100%;
+			max-width: 100%;
+		}
+
+		& textarea {
+			height: 100px;
+			margin-top: 5px;
+		}
+	}
+
+	.form__lable--file-modal2 {
+		// font-weight: bold;
+		// width: 200px;
+		// font-size: 16px;
+		// line-height: 24px;
+		// color: @text-white;
+		// margin: 0 auto;
+	}
+
+	.form__text--modal2 {
+		width: 100%;
+		//color: @text-white;
+		margin-top: 20px;
+		font-size: 14px;
+		line-height: 16px;
+	}
+
+	input.form__button--modal2 {
+		width: 100%;
+		height: 48px;
+		//margin-top: 55px;
+	}
+
+	.modal2__close-btn {
+		display: block;
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		background-color: rgba(51, 51, 51, 0.1);
+		background-image: url("../img/cross.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+		top: 0;
+		right: 0;
+		border: none;
+		cursor: pointer;
+	}
 }

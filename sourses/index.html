@@ -3,6 +3,7 @@
 
 <head>
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="slick/slick.css">
 	<link rel="stylesheet" href="css/style.css">
 	<meta charset="utf-8">
 	<title>Мебель</title>
@@ -108,7 +109,7 @@
 
 		</section>
 
-		<section class="page-main__order order" >
+		<section class="page-main__order order">
 			<div class="order__wrap" id="order">
 				<h2 class="order__title">Индивидуальный заказ</h2>
 				<p class="order__text">Отправьте заявку на индивидуальный заказ,
@@ -126,7 +127,9 @@
 					<label class="form__lable form__lable--file">Прикрепить файл
 						<input class="visually-hidden" type="file" id="file" name="file" multiple>
 					</label>
-					<p class="form__text">Нажимая на кнопку, вы принимаете <a href=""><nobr>политику конфиденциальности</nobr></a><br class="tablet"> и даете согласие на <a href="">обработку форм данных</a></p>
+					<p class="form__text">Нажимая на кнопку, вы принимаете <a href="">
+							<nobr>политику конфиденциальности</nobr>
+						</a><br class="tablet"> и даете согласие на <a href="">обработку форм данных</a></p>
 					<input class="form__button button button--gray" type="submit" value="Отправить заявку">
 				</form>
 			</div>
@@ -178,7 +181,9 @@
 						<input type="tel" name="tel" placeholder="+7 (___)-___-__-__" required>
 					</label>
 					<input class="qform__button button" type="submit" value="Отправить заявку">
-					<p class="qform__text">Нажимая на кнопку, вы принимаете <a href=""><nobr>политику конфиденциальности</nobr></a> и даете согласие на <a href="">обработку форм данных</a></p>
+					<p class="qform__text">Нажимая на кнопку, вы принимаете <a href="">
+							<nobr>политику конфиденциальности</nobr>
+						</a> и даете согласие на <a href="">обработку форм данных</a></p>
 
 				</form>
 			</div>
@@ -226,7 +231,11 @@
 
 	<div class="modal1">
 		<div class="modal1__img-wrap">
+			<div class="slider">
 			<img class="modal1__img modal1__img--1" src="img/slid1.jpg" alt="фото стул и стол">
+			<img class="modal1__img modal1__img--1" src="img/slid1.jpg" alt="фото стул и стол">
+			<img class="modal1__img modal1__img--1" src="img/slid1.jpg" alt="фото стул и стол">
+		</div>
 			<button class="modal1__img-btn modal1__img-btn--pre" type="button" name="button"><span class="visually-hidden">предыдущее фото</span></button>
 			<button class="modal1__img-btn modal1__img-btn--next" type="button" name="button"><span class="visually-hidden">следующее фото</span></button>
 			<div class="modal1__slider-controls">
@@ -289,6 +298,24 @@
 		</div>
 		<button class="modal2__close-btn close-btn"><span class="visually-hidden">Закрыть</span></button>
 	</div>
+
+
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.slider').slick({
+				dots: true
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+		$('.single-item').slick();
+	</script>
 
 	<script src="js/script.js"></script>
 </body>

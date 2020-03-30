@@ -381,8 +381,8 @@ br.tablet {
   content: '';
   display: block;
   position: absolute;
-  top: 35px;
-  right: 20px;
+  top: 38px;
+  right: 25px;
   width: 10px;
   height: 10px;
   border-right: 2px solid #D7A950;
@@ -396,11 +396,10 @@ br.tablet {
   padding-top: 62px;
   padding-bottom: 50px;
   padding-left: 96px;
-  display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.85);
   display: none;
 }
 .menu__submain-item {
@@ -420,7 +419,7 @@ br.tablet {
 }
 .menu__submain-item a:focus,
 .menu__submain-item a:hover {
-  color: #000000;
+  color: #828282;
   background-color: rgba(0, 0, 0, 0);
 }
 .menu__submain-item a:active {
@@ -440,6 +439,10 @@ br.tablet {
 }
 .menu__social-item--instagram {
   background-image: url("../img/instagram.svg");
+}
+.menu__main-item--catalog:hover .menu__submain-list,
+.menu__main-item--catalog:focus .menu__submain-list {
+  display: flex;
 }
 @media (max-width: 1790px) {
   .menu {
@@ -469,6 +472,17 @@ br.tablet {
   }
   .menu__main-item--catalog a {
     width: 125px;
+  }
+  .menu__main-item--catalog-a::after {
+    right: 17px;
+  }
+  .menu__submain-list {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  .menu__submain-item a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
   }
   .menu__social-list {
     flex-direction: column;
@@ -520,7 +534,7 @@ br.tablet {
     height: auto;
   }
   .menu__main-item--catalog {
-    width: auto;
+    width: 130px;
   }
   .menu__main-item--catalog a {
     width: auto;
@@ -544,14 +558,21 @@ br.tablet {
     margin-right: auto;
     margin-bottom: 20px;
     height: auto;
-    background-color: none;
+    background: none;
     display: none;
   }
+  .menu__main-item--catalog:hover .menu__submain-list,
+  .menu__main-item--catalog:focus .menu__submain-list,
+  .menu__main-item--catalog:active .menu__submain-list {
+    display: block;
+  }
   .menu__submain-item a {
-    height: 35px;
+    height: auto;
     width: 190px;
     font-size: 16px;
     line-height: 32px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
   .menu__submain-item a:focus,
   .menu__submain-item a:hover {
@@ -1616,6 +1637,7 @@ br.tablet {
   }
   .qform input {
     width: 100%;
+    max-width: 400px;
     vertical-align: middle;
   }
   .qform input[type="submit"] {

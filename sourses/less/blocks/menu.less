@@ -54,6 +54,7 @@
 	}
 }
 
+
 .menu__main-item--catalog-a {
 	position: relative;
 
@@ -61,8 +62,8 @@
 		content: '';
 		display: block;
 		position: absolute;
-		top: 35px;
-		right: 20px;
+		top: 38px;
+		right: 25px;
 		width: 10px;
 		height: 10px;
 		//background-color: red;
@@ -70,6 +71,7 @@
 		border-bottom: 2px solid @bg-yellow;
 		transform: rotate(45deg);
 	}
+
 }
 
 .menu__submain-list {
@@ -79,11 +81,11 @@
 	padding-top: 62px;
 	padding-bottom: 50px;
 	padding-left: 96px;
-	display: flex;
+	//display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
 	justify-content: flex-start;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.85);
 	//Временно прячем
 	display: none;
 }
@@ -105,7 +107,7 @@
 
 	&:focus,
 	&:hover {
-		color: @text-hover;
+		color: @text-footer;
 		background-color: rgba(0, 0, 0, 0.0);
 	}
 
@@ -133,6 +135,14 @@
 		background-image: url("../img/instagram.svg");
 	}
 }
+
+//.menu__main-item--catalog-a:focus,
+ .menu__main-item--catalog:hover .menu__submain-list,
+  .menu__main-item--catalog:focus .menu__submain-list
+{
+		display: flex;
+}
+
 @media (max-width: @desktop-width) {
 	.menu {
 		// display: flex;
@@ -194,6 +204,14 @@
 		}
 	}
 
+	.menu__main-item--catalog-a {
+		//position: relative;
+
+		&::after {
+			right:17px;
+		}
+	}
+
 	.menu__submain-list {
 		// position: absolute;
 		// min-width: 585px;
@@ -205,7 +223,7 @@
 		// flex-wrap: wrap;
 		// flex-direction: column;
 		// justify-content: flex-start;
-		// background-color: rgba(0, 0, 0, 0.5);
+		 background-color: rgba(0, 0, 0, 0.85);
 		// //Временно прячем
 		// display: none;
 	}
@@ -217,6 +235,9 @@
 	}
 
 	.menu__submain-item a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		height: auto;
 		// display: block;
 		// height: 40px;
 		// width: 150px;
@@ -228,7 +249,7 @@
 		// &:focus,
 		// &:hover {
 		// 	color: @text-hover;
-		// 	background-color: rgba(0, 0, 0, 0.0);
+		//background-color: none;
 		// }
 		//
 		// &:active {
@@ -321,7 +342,7 @@
 
 	.menu__main-item--catalog {
 		// position: relative;
-		width: auto;
+		width: 130px;
 
 		& a {
 			width: auto;
@@ -352,10 +373,17 @@
 		// flex-wrap: wrap;
 		// flex-direction: column;
 		// justify-content: flex-start;
-		background-color: none;
+		background: none;
 		// //Временно прячем
 		display: none;
 	}
+
+	.menu__main-item--catalog:hover .menu__submain-list,
+	 .menu__main-item--catalog:focus .menu__submain-list,
+	 .menu__main-item--catalog:active .menu__submain-list
+ {
+		 display: block;
+ }
 
 	.menu__submain-item {
 		// display: block;
@@ -365,11 +393,13 @@
 
 	.menu__submain-item a {
 		// display: block;
-		height: 35px;
+		height: auto;
 		width: 190px;
 		// .d-nole;
 		font-size: 16px;
 		line-height: 32px;
+		padding-top: 5px;
+		padding-bottom: 5px;
 		// font-weight: normal;
 		//
 		&:focus,
@@ -434,6 +464,7 @@
 			color: @text-white;
 		}
 	}
+
 	.menu__close-button {
 		order: -2;
 		margin-top: 20px;
@@ -445,6 +476,7 @@
 		background: none;
 		position: relative;
 		cursor: pointer;
+
 		&::before {
 			content: "";
 			position: absolute;
@@ -457,14 +489,10 @@
 			background-size: cover;
 		}
 	}
-
-
 	/* здесь стили, которые зависят от состояния меню (закрыто или открыто) */
-
 	// .menu--nojs .menu__contacts-phone {
 	// 	display: none;
 	// }
-
 	// 	.menu--closed .menu__toogle::before {
 	// 		content: "";
 	// 		display: block;
@@ -496,16 +524,13 @@
 	// 		background: #221f1f;
 	//
 	// 	}
+	.menu--closed {
+		display: none;
+	}
 
-		.menu--closed {
-			display: none;
-		}
-
-		.menu--opened {
-			display: flex;
-			margin-top: -115px;
-			//position: absolute;
-		}
-
-
+	.menu--opened {
+		display: flex;
+		margin-top: -115px;
+		//position: absolute;
+	}
 }

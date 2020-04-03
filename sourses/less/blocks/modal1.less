@@ -1,4 +1,5 @@
 .modal1 {
+
 	width: 1410px;
 	height: 824px;
 	display: flex;
@@ -6,12 +7,16 @@
 	background: @bg-yellow url("../img/bgModal.jpg") repeat 0 0;
 	//background-repeat: repeat;
 	background-size: cover; //background-position: center;
-	position: relative;
+	position: fixed;
+	top: 100px;
+	right: 50px;
 	border-radius: 5px;
 	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+	//display: none;
 }
 
 .modal1__img-wrap {
+	z-index: 100;
 	width: 950px;
 	position: relative;
 }
@@ -82,6 +87,8 @@
 }
 
 .modal1__form-wrap {
+	z-index: 6;
+	position: relative;
 	width: 460px;
 }
 
@@ -137,6 +144,7 @@
 }
 
 .modal1__close-btn {
+	z-index: 100;
 	display: block;
 	position: absolute;
 	width: 40px;
@@ -427,14 +435,13 @@
 			&::placeholder {
 				font-weight: normal;
 				font-size: 16px;
-
 			}
 		}
 
 		& textarea {
 			width: 255px;
 			height: 100px;
-			margin-top: 0px;
+			margin-top: 0;
 		}
 	}
 	//

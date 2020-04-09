@@ -54,7 +54,6 @@
 	}
 }
 
-
 .menu__main-item--catalog-a {
 	position: relative;
 
@@ -71,7 +70,6 @@
 		border-bottom: 2px solid @bg-yellow;
 		transform: rotate(45deg);
 	}
-
 }
 
 .menu__submain-list {
@@ -135,14 +133,20 @@
 		background-image: url("../img/instagram.svg");
 	}
 }
-
 //.menu__main-item--catalog-a:focus,
- .menu__main-item--catalog:hover .menu__submain-list,
-  .menu__main-item--catalog:focus .menu__submain-list
-{
-		display: flex;
+.menu__main-item--catalog:focus .menu__submain-list,
+.menu__main-item--catalog:hover .menu__submain-list {
+	display: flex;
 }
+@media (max-width: @desktopfull-width) {
+	@media (min-width: @desktop-width) {
+		.menu__main-item a {
 
+			padding: 33px 18px;
+
+		}
+	}
+}
 @media (max-width: @desktop-width) {
 	.menu {
 		// display: flex;
@@ -206,9 +210,8 @@
 
 	.menu__main-item--catalog-a {
 		//position: relative;
-
 		&::after {
-			right:17px;
+			right: 17px;
 		}
 	}
 
@@ -223,7 +226,7 @@
 		// flex-wrap: wrap;
 		// flex-direction: column;
 		// justify-content: flex-start;
-		 background-color: rgba(0, 0, 0, 0.85);
+		background-color: rgba(0, 0, 0, 0.85);
 		// //Временно прячем
 		// display: none;
 	}
@@ -378,12 +381,11 @@
 		display: none;
 	}
 
-	.menu__main-item--catalog:hover .menu__submain-list,
-	 .menu__main-item--catalog:focus .menu__submain-list,
-	 .menu__main-item--catalog:active .menu__submain-list
- {
-		 display: block;
- }
+	.menu__main-item--catalog:active .menu__submain-list,
+	.menu__main-item--catalog:focus .menu__submain-list,
+	.menu__main-item--catalog:hover .menu__submain-list {
+		display: block;
+	}
 
 	.menu__submain-item {
 		// display: block;

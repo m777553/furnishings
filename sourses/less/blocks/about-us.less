@@ -38,7 +38,6 @@
 .about-us__info {
 	width: 1440px;
 	.center;
-
 	min-height: 460px;
 	margin-left: 240px;
 	padding-top: 90px;
@@ -71,7 +70,24 @@
 	margin-top: 85px;
 	margin-bottom: 89px;
 }
+@media (max-width: @desktopfull-width) {
+	@media (min-width: @desktopmin-width) {
+		.about-us__statistic {
+			width: 80%;
+			padding-right: 5%;
+			padding-left: 15.5%;
+		}
 
+		.about-us {
+			background-size: 50%;
+			background-position: top right;
+		}
+		.about-us__info-text {
+			width: 47%;
+			max-width: 600px;
+		}
+	}
+}
 @media (max-width: @desktop-width) {
 	.about-us {
 		// width: 100%;
@@ -97,8 +113,7 @@
 		background-position: center;
 		padding-top: 70px;
 		padding-right: 0;
-		padding-left: 0;
-//		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+		padding-left: 0; //		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 		z-index: 0;
 	}
 
@@ -107,7 +122,6 @@
 		// font-weight: bold;
 		// font-size: 18px;
 		// line-height: 24px;
-
 		&--big {
 			// font-weight: bold;
 			// font-size: 64px;
@@ -118,14 +132,14 @@
 	.about-us__info {
 		width: 100%;
 		.center;
-
 		min-height: 593px;
 		// margin-left: 240px;
 		padding-top: 158px;
 	}
+
 	.about-us__info-wrap {
 		.widthForTabletWrap;
-.center;
+		.center;
 	}
 
 	.about-us__info-title {
@@ -135,7 +149,6 @@
 		// font-size: 40px;
 		// line-height: 48px;
 		// position: relative;
-
 		// &::after {
 		// 	content: "";
 		// 	position: absolute;
@@ -157,9 +170,7 @@
 		margin-top: 85px;
 		margin-bottom: 158px;
 	}
-
 }
-
 @media (max-width: @tablet-width) {
 	.about-us {
 		// width: 100%;
@@ -187,8 +198,7 @@
 		// color: @text-white;
 		background-size: cover;
 		background-position: center;
-		padding: 25px 0;
-//		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+		padding: 25px 0; //		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 		//z-index: 0;
 	}
 
@@ -209,14 +219,14 @@
 	.about-us__info {
 		width: 100%;
 		.center;
-
 		min-height: auto;
 		// margin-left: 240px;
 		padding-top: 135px;
 	}
+
 	.about-us__info-wrap {
 		.widthForMobileWrap;
-.center;
+		.center;
 	}
 
 	.about-us__info-title {
@@ -227,17 +237,16 @@
 		line-height: 48px;
 		color: @text;
 		// position: relative;
-
-		 &::after {
-		// 	content: "";
-		// 	position: absolute;
-		// 	display: block;
-		width: 58px;
-		height: 4px;
-		// 	left: 0;
+		&::after {
+			// 	content: "";
+			// 	position: absolute;
+			// 	display: block;
+			width: 58px;
+			height: 4px;
+			// 	left: 0;
 			bottom: -7px;
-		// 	background-color: @bg-yellow;
-		opacity: 1;
+			// 	background-color: @bg-yellow;
+			opacity: 1;
 		}
 	}
 

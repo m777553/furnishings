@@ -6,6 +6,7 @@ var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
 
 gulp.task('less', function () {
   return gulp.src("sourses/less/style.less") // путь к файлам-исходникам
@@ -58,4 +59,19 @@ gulp.task("style", function () {
  .pipe(minify())
  .pipe(rename("style.min.css"))
  .pipe(gulp.dest("source/css"));
+});
+
+
+
+// var gulp = require("gulp");
+// var imagemin = require("gulp-imagemin");
+
+gulp.task("images", function () {
+ return gulp.src("sourses/img/**/*.{png,jpg,svg}")
+ .pipe(imagemin([
+ imagemin.optipng({optimizationLevel: 3}),
+ imagemin.mozjpeg({quality: 75, progressive: true}),
+ imagemin.svgo()
+ ]))
+.pipe(gulp.dest("source/img"));
 });

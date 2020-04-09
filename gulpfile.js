@@ -4,6 +4,8 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var minify = require("gulp-csso");
+var rename = require("gulp-rename");
 
 gulp.task('less', function () {
   return gulp.src("sourses/less/style.less") // путь к файлам-исходникам
@@ -34,4 +36,26 @@ gulp.task('less', function () {
 //series перезапускает задачу less
 gulp.task('c', function () {
     gulp.watch('sourses/less/**/*.less', gulp.series('less')); //series - перезапуск задачи LESS
+});
+
+// var gulp = require("gulp");
+// var less = require("gulp-less");
+// var plumber = require("gulp-plumber");
+// var postcss = require("gulp-postcss");
+// var autoprefixer = require("autoprefixer");
+// var minify = require("gulp-csso");
+// var rename = require("gulp-rename");
+
+
+gulp.task("style", function () {
+ gulp.src("sourses/less/style.less")
+ .pipe(plumber())
+ .pipe(less())
+ .pipe(postcss([
+ autoprefixer()
+ ]))
+ .pipe(gulp.dest("source/css"))
+ .pipe(minify())
+ .pipe(rename("style.min.css"))
+ .pipe(gulp.dest("source/css"));
 });

@@ -1,5 +1,5 @@
 source/css/style.css
 node_modules/
 *.lnk
-
+build
 02_PREVIEWS/

@@ -8,6 +8,11 @@ var minify = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 
+var del = require("del");
+
+gulp.task("clean", function () {
+  return del("build");
+})
 
 
 gulp.task('less', function () {
@@ -43,29 +48,33 @@ gulp.task('c', function () {
     gulp.watch('sourses/less/**/*.less', gulp.series('less')); //series - перезапуск задачи LESS
 });
 
-// var gulp = require("gulp");
-// var less = require("gulp-less");
-// var plumber = require("gulp-plumber");
-// var postcss = require("gulp-postcss");
-// var autoprefixer = require("autoprefixer");
-// var minify = require("gulp-csso");
-// var rename = require("gulp-rename");
 
 
-gulp.task("style", function () {
+
+gulp.task("style", function (done) {
  gulp.src("sourses/less/style.less")
  .pipe(plumber())
  .pipe(less())
  .pipe(postcss([
  autoprefixer()
  ]))
- .pipe(gulp.dest("source/css"))
+ .pipe(gulp.dest("build/css"))
  .pipe(minify())
  .pipe(rename("style.min.css"))
- .pipe(gulp.dest("source/css"));
+ .pipe(gulp.dest("build/css"))
+ done();
 });
 
-
+gulp.task("copy", function () {
+  return gulp.src([
+    "sourses/fonts/**/*.{woff,woff2}",
+    "sourses/js/**",
+    "sourses/*.html"
+  ], {
+    base: "sourses"
+  })
+  .pipe(gulp.dest("build"));
+})
 
 // var gulp = require("gulp");
 // var imagemin = require("gulp-imagemin");
@@ -77,5 +86,14 @@ gulp.task("images", function () {
  imagemin.mozjpeg({quality: 75, progressive: true}),
  imagemin.svgo()
  ]))
-.pipe(gulp.dest("source/img"));
+.pipe(gulp.dest("build/img"));
 });
+
+
+gulp.task("build",
+  gulp.series(
+    "clean",
+    "copy",
+    "style",
+    "images"
+  ));

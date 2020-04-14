@@ -8,12 +8,16 @@ var minify = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 
+
+
 gulp.task('less', function () {
   return gulp.src("sourses/less/style.less") // путь к файлам-исходникам
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
-    autoprefixer()
+    autoprefixer({
+      cascade: false
+    })
     ]))
 
     .pipe(gulp.dest("sourses/css")) // путь к папке, куда помещаем конечные файлы
@@ -24,12 +28,12 @@ gulp.task('less', function () {
 
 //.pipe(plugin_name()) // название плагина, через который прогоняем их
 
- gulp.task("server", gulp.series("less"), function () {
+ gulp.task("server", function () {
   server.init({
     server: "sourses/"
   });
   gulp.watch('sourses/less/**/*.less', gulp.series("less"), server.reload);
-  //gulp.watch('sources/*.html', server.reload);
+  gulp.watch('sources/*.html', server.reload);
 
 });
 
